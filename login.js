@@ -203,7 +203,7 @@ function validateUsername() {
     
     switch(userType) {
         case 'student':
-            isValid = /^\d{7}$/.test(username); // 7 digits for student ID
+            isValid = /^\d{9}$/.test(username); // 7 digits for student ID
             break;
         case 'faculty':
         case 'employee':
