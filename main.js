@@ -272,13 +272,13 @@ function openService(serviceType) {
         
         switch(serviceType) {
             case 'student-services':
-                window.location.href = 'student-services.html';
+                window.location.href = '#';
                 break;
             case 'faculty-services':
-                window.location.href = 'faculty-services.html';
+                window.location.href = '#';
                 break;
             case 'employee-services':
-                window.location.href = 'employee-services.html';
+                window.location.href = '#';
                 break;
             case 'financial-services':
                 window.location.href = 'financial.html';
@@ -297,22 +297,22 @@ function openServicePage(serviceName) {
         
         switch(serviceName) {
             case 'registration':
-                window.location.href = 'registration.html';
+                window.location.href = '#';
                 break;
             case 'schedule':
-                window.location.href = 'schedule.html';
+                window.location.href = '#';
                 break;
             case 'grades':
                 showNotification('خدمة النتائج قيد التطوير', 'info');
                 break;
             case 'transcript':
-                window.location.href = 'transcript.html';
+                window.location.href = '#';
                 break;
             case 'financial':
                 window.location.href = 'financial.html';
                 break;
             case 'documents':
-                window.location.href = 'documents.html';
+                window.location.href = '#';
                 break;
             default:
                 showNotification('الصفحة غير متاحة حالياً', 'warning');
@@ -604,7 +604,7 @@ function logout() {
     localStorage.removeItem('kau_user');
     showNotification('تم تسجيل الخروج بنجاح', 'success');
     setTimeout(() => {
-        window.location.href = 'pages/login.html';
+        window.location.href = 'pages/index.html';
     }, 1500);
 }
 
