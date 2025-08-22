@@ -8,7 +8,7 @@ const maxAttempts = 3;
 // User credentials for demo
 const demoUsers = {
     student: {
-        '202511922': { password: '1136334107', name: 'أثير بنت أحمد بن علي هادي احمد', type: 'student' },
+        '202511922': { password: '1136334107', name: 'أثير بنت أحمد بن علي هادي أحمد', type: 'student' },
         '2420384': { password: 'student456', name: 'سارة محمد علي', type: 'student' },
         '2420385': { password: 'student789', name: 'فهد عبدالله أحمد', type: 'student' }
     },
@@ -555,7 +555,7 @@ function redirectToDashboard() {
         sessionStorage.removeItem('kau_return_url');
         window.location.href = returnUrl;
     } else {
-        window.location.href = 'acadimic.html';
+        window.location.href = 'academic.html';
     }
 }
 

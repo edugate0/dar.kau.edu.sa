@@ -272,16 +272,16 @@ function openService(serviceType) {
         
         switch(serviceType) {
             case 'student-services':
-                window.location.href = '#';
+                window.location.href = 'pages/student-services.html';
                 break;
             case 'faculty-services':
-                window.location.href = '#';
+                window.location.href = 'pages/faculty-services.html';
                 break;
             case 'employee-services':
-                window.location.href = '#';
+                window.location.href = 'pages/employee-services.html';
                 break;
             case 'financial-services':
-                window.location.href = 'financial.html';
+                window.location.href = 'pages/financial.html';
                 break;
             default:
                 showNotification('الخدمة غير متاحة حالياً', 'warning');
@@ -297,10 +297,10 @@ function openServicePage(serviceName) {
         
         switch(serviceName) {
             case 'registration':
-                window.location.href = '#';
+                window.location.href = 'registration.html';
                 break;
             case 'schedule':
-                window.location.href = '#';
+                window.location.href = 'schedule.html';
                 break;
             case 'grades':
                 showNotification('خدمة النتائج قيد التطوير', 'info');
@@ -313,6 +313,9 @@ function openServicePage(serviceName) {
                 break;
             case 'documents':
                 window.location.href = '#';
+                break;
+            case 'student_card':
+                window.location.href = 'student_card.html';
                 break;
             default:
                 showNotification('الصفحة غير متاحة حالياً', 'warning');
@@ -604,7 +607,7 @@ function logout() {
     localStorage.removeItem('kau_user');
     showNotification('تم تسجيل الخروج بنجاح', 'success');
     setTimeout(() => {
-        window.location.href = 'pages/index.html';
+        window.location.href = 'login.html';
     }, 1500);
 }
 
@@ -652,7 +655,7 @@ function handleSearch(e) {
             { title: 'التسجيل في المقررات', url: 'registration.html' },
             { title: 'الجدول الدراسي', url: 'schedule.html' },
             { title: 'الشؤون المالية', url: 'financial.html' },
-            { title: 'كشف الدرجات', url: 'transcript.html' }
+            { title: 'كشف الدرجات', url: '#' }
         ].filter(item => item.title.includes(query));
         
         displaySearchResults(results);
